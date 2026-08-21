@@ -1,0 +1,1464 @@
+/* ============================================================
+   SMS SHIELD AI
+   PREMIUM SECURITY / AI UI
+   BLUE + SLATE + PURPLE
+   ============================================================ */
+
+:root {
+    --blue: #1687C7;
+    --blue-dark: #155A7A;
+    --blue-soft: #EAF5FB;
+
+    --purple: #7656A8;
+    --purple-dark: #60438E;
+    --purple-soft: #F0EBF8;
+
+    --slate: #494D5F;
+    --slate-dark: #343746;
+    --slate-light: #686D7E;
+
+    --bg: #F3F5F7;
+    --surface: #FFFFFF;
+    --surface-soft: #F8FAFB;
+
+    --border: #DDE2E8;
+
+    --text: #292D38;
+    --text-soft: #707685;
+    --text-muted: #969CA8;
+
+    --green: #4F8A68;
+    --green-soft: #EAF4EE;
+
+    --red: #C95757;
+    --red-soft: #FBEDED;
+
+    --yellow: #B88A32;
+    --yellow-soft: #F8F2E4;
+
+    --shadow-sm:
+        0 4px 14px rgba(45,52,65,.06);
+
+    --shadow:
+        0 10px 30px rgba(45,52,65,.09);
+
+    --shadow-lg:
+        0 18px 45px rgba(45,52,65,.14);
+}
+
+
+/* ============================================================
+   GLOBAL
+   ============================================================ */
+
+.stApp {
+    background:
+        linear-gradient(
+            135deg,
+            #F3F5F7 0%,
+            #F6F8FA 55%,
+            #F1F2F7 100%
+        ) !important;
+
+    color: var(--text) !important;
+}
+
+.main {
+    background: transparent !important;
+}
+
+.main .block-container {
+    max-width: 1180px !important;
+    padding-top: 2rem !important;
+    padding-bottom: 4rem !important;
+}
+
+
+/* ============================================================
+   BACKGROUND ATMOSPHERE
+   ============================================================ */
+
+.stApp::before {
+    content: "";
+
+    position: fixed;
+
+    width: 520px;
+    height: 520px;
+
+    top: -300px;
+    right: -180px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(22,135,199,.10),
+            rgba(118,86,168,.04),
+            transparent 70%
+        );
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+/* ============================================================
+   SIDEBAR
+   ============================================================ */
+
+section[data-testid="stSidebar"] {
+    background:
+        linear-gradient(
+            180deg,
+            #494D5F 0%,
+            #3E4252 100%
+        ) !important;
+
+    border-right:
+        1px solid #5A5F71 !important;
+}
+
+section[data-testid="stSidebar"] > div {
+    background: transparent !important;
+}
+
+section[data-testid="stSidebar"] * {
+    color: #E9ECF1 !important;
+}
+
+
+/* ============================================================
+   SIDEBAR NAVIGATION
+   ============================================================ */
+
+section[data-testid="stSidebar"]
+[data-testid="stSidebarNav"] a {
+    color: #C9CDD6 !important;
+
+    border-radius: 11px !important;
+
+    margin: 4px 0 !important;
+
+    transition:
+        background .2s ease,
+        color .2s ease,
+        transform .2s ease !important;
+}
+
+section[data-testid="stSidebar"]
+[data-testid="stSidebarNav"] a:hover {
+    background:
+        rgba(255,255,255,.08) !important;
+
+    color:
+        #FFFFFF !important;
+
+    transform:
+        translateX(3px);
+}
+
+section[data-testid="stSidebar"]
+[data-testid="stSidebarNav"] a[aria-current="page"] {
+    background:
+        linear-gradient(
+            90deg,
+            #1687C7,
+            #2078A8
+        ) !important;
+
+    color:
+        #FFFFFF !important;
+
+    box-shadow:
+        0 8px 20px
+        rgba(22,135,199,.25) !important;
+}
+
+
+/* ============================================================
+   SIDEBAR DIVIDERS
+   ============================================================ */
+
+section[data-testid="stSidebar"] hr {
+    border: none !important;
+
+    border-top:
+        1px solid rgba(255,255,255,.12) !important;
+
+    margin:
+        18px 0 !important;
+}
+
+
+/* ============================================================
+   HERO
+   ============================================================ */
+
+.dash-hero,
+.analysis-hero,
+.history-hero,
+.insights-hero {
+    position: relative !important;
+
+    overflow: hidden !important;
+
+    background:
+        linear-gradient(
+            125deg,
+            #494D5F 0%,
+            #414555 55%,
+            #343746 100%
+        ) !important;
+
+    border:
+        1px solid #5A5F70 !important;
+
+    border-radius:
+        24px !important;
+
+    box-shadow:
+        var(--shadow-lg) !important;
+}
+
+
+/* ============================================================
+   HERO DECORATION
+   ============================================================ */
+
+.dash-hero::after,
+.analysis-hero::after,
+.history-hero::after,
+.insights-hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 400px;
+    height: 400px;
+
+    right: -190px;
+    top: -210px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(22,135,199,.25),
+            rgba(118,86,168,.14),
+            transparent 70%
+        );
+
+    pointer-events: none;
+}
+
+
+/* ============================================================
+   HERO TYPOGRAPHY
+   ============================================================ */
+
+.dash-title,
+.analysis-title,
+.history-title,
+.insights-title {
+    color:
+        #FFFFFF !important;
+
+    font-weight:
+        900 !important;
+
+    letter-spacing:
+        -1.2px !important;
+}
+
+.dash-eyebrow,
+.analysis-eyebrow,
+.history-eyebrow,
+.insights-eyebrow {
+    color:
+        #8DD1F2 !important;
+
+    font-weight:
+        850 !important;
+
+    letter-spacing:
+        2px !important;
+}
+
+.dash-description,
+.analysis-description,
+.history-description,
+.insights-description {
+    color:
+        #D1D6DE !important;
+
+    line-height:
+        1.75 !important;
+}
+
+
+/* ============================================================
+   STATUS
+   ============================================================ */
+
+.dash-status {
+    background:
+        rgba(79,138,104,.20) !important;
+
+    border:
+        1px solid rgba(110,177,139,.35) !important;
+
+    color:
+        #B8E0C8 !important;
+}
+
+.dash-status-dot {
+    background:
+        #6EB18B !important;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(110,177,139,.12) !important;
+}
+
+
+/* ============================================================
+   SECTION HEADINGS
+   ============================================================ */
+
+.dash-section-title,
+.analysis-card-title,
+.history-section-title,
+.insights-section-title {
+    color:
+        var(--text) !important;
+
+    font-weight:
+        900 !important;
+}
+
+.dash-section-subtitle,
+.analysis-card-subtitle,
+.history-section-subtitle,
+.insights-section-subtitle {
+    color:
+        var(--text-muted) !important;
+}
+
+
+/* ============================================================
+   METRIC CARDS
+   ============================================================ */
+
+.dash-metric,
+.insight-metric,
+.history-stat,
+.analysis-card,
+.pipeline-card,
+.result-box {
+    background:
+        rgba(255,255,255,.96) !important;
+
+    border:
+        1px solid var(--border) !important;
+
+    border-radius:
+        17px !important;
+
+    box-shadow:
+        var(--shadow-sm) !important;
+
+    transition:
+        transform .22s ease,
+        box-shadow .22s ease,
+        border-color .22s ease !important;
+}
+
+.dash-metric:hover,
+.insight-metric:hover,
+.history-stat:hover {
+    transform:
+        translateY(-4px);
+
+    border-color:
+        #C8D8E3 !important;
+
+    box-shadow:
+        var(--shadow) !important;
+}
+
+
+/* ============================================================
+   METRIC TEXT
+   ============================================================ */
+
+.dash-metric-label,
+.insight-metric-label,
+.history-stat-label,
+.result-box-label {
+    color:
+        #89909D !important;
+
+    font-weight:
+        850 !important;
+
+    letter-spacing:
+        .8px !important;
+}
+
+.dash-metric-value,
+.insight-metric-value,
+.history-stat-value,
+.result-box-value {
+    color:
+        var(--slate-dark) !important;
+
+    font-weight:
+        900 !important;
+}
+
+.dash-metric-note,
+.insight-metric-note,
+.history-stat-note {
+    color:
+        #9AA1AB !important;
+}
+
+
+/* ============================================================
+   COMMAND CENTER
+   ============================================================ */
+
+.dash-command {
+    background:
+        #FFFFFF !important;
+
+    border:
+        1px solid var(--border) !important;
+
+    border-radius:
+        20px !important;
+
+    box-shadow:
+        var(--shadow) !important;
+}
+
+.dash-command-title,
+.pipeline-title {
+    color:
+        var(--text) !important;
+}
+
+.dash-command-description,
+.pipeline-subtitle {
+    color:
+        var(--text-soft) !important;
+}
+
+.dash-command-badge {
+    background:
+        var(--blue-soft) !important;
+
+    border:
+        1px solid #CDE5F3 !important;
+
+    color:
+        var(--blue-dark) !important;
+}
+
+
+/* ============================================================
+   DETECTION ENGINE
+   ============================================================ */
+
+.dash-engine,
+.analysis-engine,
+.config-card {
+    background:
+        linear-gradient(
+            145deg,
+            #F8FAFB,
+            #EEF2F5
+        ) !important;
+
+    border:
+        1px solid #D7DEE5 !important;
+
+    border-radius:
+        19px !important;
+
+    box-shadow:
+        var(--shadow-sm) !important;
+}
+
+.dash-engine-title,
+.engine-name,
+.config-title {
+    color:
+        var(--slate-dark) !important;
+
+    font-weight:
+        900 !important;
+}
+
+.dash-engine-subtitle,
+.engine-caption,
+.config-subtitle {
+    color:
+        #8C94A0 !important;
+}
+
+.dash-engine-row,
+.engine-line,
+.config-row {
+    border-bottom:
+        1px solid #DCE2E8 !important;
+}
+
+.dash-engine-label,
+.engine-line span,
+.config-row span {
+    color:
+        #8A929D !important;
+}
+
+.dash-engine-value,
+.engine-line strong,
+.config-row strong {
+    color:
+        #444957 !important;
+}
+
+
+/* ============================================================
+   ONLINE BADGE
+   ============================================================ */
+
+.dash-online,
+.engine-badge {
+    background:
+        var(--green-soft) !important;
+
+    border:
+        1px solid #CDE2D5 !important;
+
+    color:
+        var(--green) !important;
+
+    border-radius:
+        999px !important;
+}
+
+
+/* ============================================================
+   TEXT AREA
+   ============================================================ */
+
+.stTextArea textarea,
+.stTextInput input {
+    background:
+        #FFFFFF !important;
+
+    color:
+        var(--text) !important;
+
+    border:
+        1px solid #CDD5DD !important;
+
+    border-radius:
+        13px !important;
+
+    box-shadow:
+        inset 0 1px 3px
+        rgba(45,52,65,.025) !important;
+
+    transition:
+        border-color .2s ease,
+        box-shadow .2s ease !important;
+}
+
+.stTextArea textarea::placeholder,
+.stTextInput input::placeholder {
+    color:
+        #9CA3AE !important;
+}
+
+.stTextArea textarea:hover,
+.stTextInput input:hover {
+    border-color:
+        #A9C6D8 !important;
+}
+
+.stTextArea textarea:focus,
+.stTextInput input:focus {
+    border-color:
+        var(--blue) !important;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(22,135,199,.10) !important;
+}
+
+
+/* ============================================================
+   PRIMARY BUTTON
+   ============================================================ */
+
+.stButton > button[kind="primary"] {
+    background:
+        linear-gradient(
+            135deg,
+            #1687C7,
+            #146FA5
+        ) !important;
+
+    color:
+        #FFFFFF !important;
+
+    border:
+        1px solid #2797D2 !important;
+
+    border-radius:
+        12px !important;
+
+    font-weight:
+        800 !important;
+
+    box-shadow:
+        0 8px 20px
+        rgba(22,135,199,.20) !important;
+
+    transition:
+        all .22s ease !important;
+}
+
+.stButton > button[kind="primary"]:hover {
+    background:
+        linear-gradient(
+            135deg,
+            #2396D3,
+            #1579B1
+        ) !important;
+
+    transform:
+        translateY(-2px) !important;
+
+    box-shadow:
+        0 13px 28px
+        rgba(22,135,199,.25) !important;
+}
+
+
+/* ============================================================
+   SECONDARY BUTTON
+   ============================================================ */
+
+.stButton > button {
+    background:
+        #FFFFFF !important;
+
+    color:
+        #5F6674 !important;
+
+    border:
+        1px solid #D2D9E0 !important;
+
+    border-radius:
+        11px !important;
+
+    font-weight:
+        700 !important;
+
+    transition:
+        all .2s ease !important;
+}
+
+.stButton > button:hover {
+    background:
+        #F2F6F9 !important;
+
+    color:
+        var(--blue-dark) !important;
+
+    border-color:
+        #B8D0DF !important;
+
+    transform:
+        translateY(-1px) !important;
+}
+
+
+/* ============================================================
+   AI / PURPLE ELEMENTS
+   ============================================================ */
+
+.ai-badge,
+.insight-badge,
+.model-ai {
+    background:
+        var(--purple-soft) !important;
+
+    border:
+        1px solid #DCCFF0 !important;
+
+    color:
+        var(--purple-dark) !important;
+}
+
+
+/* ============================================================
+   SPAM RESULT
+   ============================================================ */
+
+.analysis-spam,
+.dash-result-spam {
+    background:
+        linear-gradient(
+            135deg,
+            #FFF5F5,
+            #FBEAEC
+        ) !important;
+
+    border:
+        1px solid #EACDD0 !important;
+
+    border-radius:
+        20px !important;
+}
+
+.analysis-spam .result-status,
+.analysis-spam .result-title,
+.dash-result-spam .dash-result-label,
+.dash-result-spam .dash-result-title {
+    color:
+        var(--red) !important;
+}
+
+
+/* ============================================================
+   HAM RESULT
+   ============================================================ */
+
+.analysis-ham,
+.dash-result-ham {
+    background:
+        linear-gradient(
+            135deg,
+            #F0F7F3,
+            #E8F2EC
+        ) !important;
+
+    border:
+        1px solid #CDE2D5 !important;
+
+    border-radius:
+        20px !important;
+}
+
+.analysis-ham .result-status,
+.analysis-ham .result-title,
+.dash-result-ham .dash-result-label,
+.dash-result-ham .dash-result-title {
+    color:
+        var(--green) !important;
+}
+
+.result-description,
+.dash-result-text {
+    color:
+        #707784 !important;
+}
+
+
+/* ============================================================
+   HISTORY
+   ============================================================ */
+
+.scan-card {
+    background:
+        #FFFFFF !important;
+
+    border:
+        1px solid var(--border) !important;
+
+    border-radius:
+        16px !important;
+
+    box-shadow:
+        var(--shadow-sm) !important;
+
+    transition:
+        all .2s ease !important;
+}
+
+.scan-card:hover {
+    transform:
+        translateY(-3px);
+
+    border-color:
+        #C8D7E2 !important;
+
+    box-shadow:
+        var(--shadow) !important;
+}
+
+.scan-number {
+    color:
+        #89909C !important;
+}
+
+.scan-time {
+    color:
+        #A0A6AF !important;
+}
+
+.scan-message {
+    color:
+        #4A4F5B !important;
+}
+
+.scan-spam {
+    background:
+        var(--red-soft) !important;
+
+    border-color:
+        #EACDD0 !important;
+
+    color:
+        var(--red) !important;
+}
+
+.scan-ham {
+    background:
+        var(--green-soft) !important;
+
+    border-color:
+        #CDE2D5 !important;
+
+    color:
+        var(--green) !important;
+}
+
+
+/* ============================================================
+   EMPTY STATE
+   ============================================================ */
+
+.history-empty {
+    background:
+        linear-gradient(
+            145deg,
+            #F9FAFB,
+            #F0F3F6
+        ) !important;
+
+    border:
+        1px dashed #CCD5DD !important;
+
+    border-radius:
+        20px !important;
+}
+
+.history-empty-icon {
+    background:
+        var(--purple-soft) !important;
+
+    border:
+        1px solid #DCCFF0 !important;
+
+    color:
+        var(--purple) !important;
+}
+
+.history-empty-title {
+    color:
+        var(--text) !important;
+}
+
+.history-empty-text {
+    color:
+        #89919D !important;
+}
+
+
+/* ============================================================
+   PIPELINE
+   ============================================================ */
+
+.pipeline-number {
+    background:
+        var(--purple-soft) !important;
+
+    border:
+        1px solid #DCCFF0 !important;
+
+    color:
+        var(--purple) !important;
+}
+
+.pipeline-name {
+    color:
+        #454A57 !important;
+}
+
+.pipeline-description {
+    color:
+        #8A929D !important;
+}
+
+
+/* ============================================================
+   THRESHOLD
+   ============================================================ */
+
+.threshold-card {
+    background:
+        linear-gradient(
+            135deg,
+            #EDF6FB,
+            #F2EEF8
+        ) !important;
+
+    border:
+        1px solid #D5DCE6 !important;
+
+    border-radius:
+        20px !important;
+}
+
+.threshold-label {
+    color:
+        #828A96 !important;
+}
+
+.threshold-value {
+    color:
+        var(--purple) !important;
+}
+
+.threshold-description {
+    color:
+        #737B87 !important;
+}
+
+
+/* ============================================================
+   MODEL STATUS
+   ============================================================ */
+
+.model-status {
+    background:
+        #FFFFFF !important;
+
+    border:
+        1px solid var(--border) !important;
+
+    border-radius:
+        15px !important;
+
+    box-shadow:
+        var(--shadow-sm) !important;
+}
+
+.model-status-title {
+    color:
+        #464B58 !important;
+}
+
+.model-status-text {
+    color:
+        #8A929D !important;
+}
+
+.model-status-dot {
+    background:
+        #579270 !important;
+
+    box-shadow:
+        0 0 0 5px
+        rgba(79,138,104,.10) !important;
+}
+
+
+/* ============================================================
+   NOTES
+   ============================================================ */
+
+.analysis-note,
+.insight-note {
+    background:
+        #F0F3F6 !important;
+
+    border:
+        1px solid #DCE2E8 !important;
+
+    color:
+        #737B87 !important;
+
+    border-radius:
+        13px !important;
+}
+
+.analysis-note strong,
+.insight-note strong {
+    color:
+        #454A57 !important;
+}
+
+
+/* ============================================================
+   SELECT
+   ============================================================ */
+
+div[data-baseweb="select"] > div {
+    background:
+        #FFFFFF !important;
+
+    border:
+        1px solid #D1D8E0 !important;
+
+    color:
+        #59616E !important;
+
+    border-radius:
+        10px !important;
+}
+
+
+/* ============================================================
+   ALERTS
+   ============================================================ */
+
+div[data-testid="stAlert"] {
+    border-radius:
+        13px !important;
+
+    box-shadow:
+        var(--shadow-sm) !important;
+}
+
+
+/* ============================================================
+   EXPANDERS
+   ============================================================ */
+
+details {
+    background:
+        #FFFFFF !important;
+
+    border:
+        1px solid var(--border) !important;
+
+    border-radius:
+        12px !important;
+}
+
+
+/* ============================================================
+   DIVIDERS
+   ============================================================ */
+
+hr {
+    border-top:
+        1px solid #DCE2E8 !important;
+}
+
+
+/* ============================================================
+   STREAMLIT HEADER
+   ============================================================ */
+
+header[data-testid="stHeader"] {
+    background:
+        rgba(243,245,247,.90) !important;
+
+    backdrop-filter:
+        blur(14px) !important;
+}
+
+
+/* ============================================================
+   ANIMATION
+   ============================================================ */
+
+.dash-metric,
+.insight-metric,
+.history-stat,
+.scan-card,
+.analysis-card,
+.pipeline-card,
+.config-card {
+    animation:
+        premiumEntry .45s ease both;
+}
+
+@keyframes premiumEntry {
+
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ============================================================
+   BUTTON PRESS
+   ============================================================ */
+
+.stButton > button:active {
+    transform:
+        scale(.98) !important;
+}
+
+
+/* ============================================================
+   SCROLLBAR
+   ============================================================ */
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background:
+        #ECEFF2;
+}
+
+::-webkit-scrollbar-thumb {
+    background:
+        #B6BBC5;
+
+    border-radius:
+        20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background:
+        #9298A5;
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 900px) {
+
+    .main .block-container {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    .dash-title,
+    .analysis-title,
+    .history-title,
+    .insights-title {
+        font-size: 28px !important;
+    }
+}
+/* ============================================================
+   FINAL TYPOGRAPHY / READABILITY POLISH
+   ============================================================ */
+
+/* Main page headings */
+.dash-title,
+.analysis-title,
+.history-title,
+.insights-title {
+    font-size: 38px !important;
+    line-height: 1.12 !important;
+}
+
+/* Hero eyebrow */
+.dash-eyebrow,
+.analysis-eyebrow,
+.history-eyebrow,
+.insights-eyebrow {
+    font-size: 11px !important;
+    line-height: 1.4 !important;
+}
+
+/* Hero descriptions */
+.dash-description,
+.analysis-description,
+.history-description,
+.insights-description {
+    font-size: 14px !important;
+    line-height: 1.65 !important;
+}
+
+/* Section headings */
+.dash-section-title,
+.analysis-card-title,
+.history-section-title,
+.insights-section-title {
+    font-size: 20px !important;
+    line-height: 1.3 !important;
+}
+
+.dash-section-subtitle,
+.analysis-card-subtitle,
+.history-section-subtitle,
+.insights-section-subtitle {
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+}
+
+
+/* ============================================================
+   METRIC CARDS
+   ============================================================ */
+
+.dash-metric-label,
+.insight-metric-label,
+.history-stat-label,
+.result-box-label {
+    font-size: 11px !important;
+}
+
+.dash-metric-value,
+.insight-metric-value,
+.history-stat-value,
+.result-box-value {
+    font-size: 30px !important;
+}
+
+.dash-metric-note,
+.insight-metric-note,
+.history-stat-note {
+    font-size: 11px !important;
+    line-height: 1.45 !important;
+}
+
+
+/* ============================================================
+   COMMAND / ANALYSIS CARDS
+   ============================================================ */
+
+.dash-command-title,
+.pipeline-title,
+.engine-name,
+.config-title {
+    font-size: 19px !important;
+}
+
+.dash-command-description,
+.pipeline-subtitle,
+.engine-caption,
+.config-subtitle {
+    font-size: 13px !important;
+    line-height: 1.6 !important;
+}
+
+
+/* ============================================================
+   ENGINE ROWS
+   ============================================================ */
+
+.dash-engine-label,
+.engine-line span,
+.config-row span,
+.engine-label,
+.runtime-label {
+    font-size: 12px !important;
+}
+
+.dash-engine-value,
+.engine-line strong,
+.config-row strong,
+.engine-value,
+.runtime-value {
+    font-size: 12px !important;
+}
+
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+
+.stButton > button {
+    font-size: 13px !important;
+    min-height: 42px !important;
+}
+
+
+/* ============================================================
+   INPUTS
+   ============================================================ */
+
+.stTextArea textarea,
+.stTextInput input {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+}
+
+.stTextArea textarea::placeholder,
+.stTextInput input::placeholder {
+    font-size: 13px !important;
+}
+
+
+/* ============================================================
+   RESULT
+   ============================================================ */
+
+.result-status,
+.result-label {
+    font-size: 11px !important;
+}
+
+.result-title {
+    font-size: 28px !important;
+}
+
+.result-description,
+.result-text {
+    font-size: 13px !important;
+    line-height: 1.65 !important;
+}
+
+
+/* ============================================================
+   HISTORY
+   ============================================================ */
+
+.scan-number,
+.scan-time {
+    font-size: 11px !important;
+}
+
+.scan-message {
+    font-size: 13px !important;
+    line-height: 1.65 !important;
+}
+
+.scan-badge,
+.score-badge {
+    font-size: 10px !important;
+}
+
+
+/* ============================================================
+   PIPELINE
+   ============================================================ */
+
+.pipeline-name {
+    font-size: 13px !important;
+}
+
+.pipeline-description {
+    font-size: 12px !important;
+    line-height: 1.6 !important;
+}
+
+
+/* ============================================================
+   MODEL INSIGHTS
+   ============================================================ */
+
+.insight-metric-label {
+    font-size: 11px !important;
+}
+
+.insight-metric-value {
+    font-size: 30px !important;
+}
+
+.insight-metric-note {
+    font-size: 11px !important;
+}
+
+.threshold-label {
+    font-size: 11px !important;
+}
+
+.threshold-value {
+    font-size: 30px !important;
+}
+
+.threshold-description {
+    font-size: 12px !important;
+    line-height: 1.6 !important;
+}
+
+
+/* ============================================================
+   NOTES / INFORMATION
+   ============================================================ */
+
+.analysis-note,
+.insight-note,
+.info-note {
+    font-size: 12px !important;
+    line-height: 1.65 !important;
+}
+
+
+/* ============================================================
+   FOOTERS
+   ============================================================ */
+
+.dash-footer,
+.analysis-footer,
+.history-footer,
+.insights-footer,
+.dashboard-footer,
+.page-footer {
+    font-size: 10px !important;
+}
+
+
+/* ============================================================
+   SIDEBAR
+   ============================================================ */
+
+section[data-testid="stSidebar"] {
+    font-size: 13px !important;
+}
+
+section[data-testid="stSidebar"] [data-testid="stSidebarNav"] a {
+    font-size: 13px !important;
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 900px) {
+
+    .dash-title,
+    .analysis-title,
+    .history-title,
+    .insights-title {
+        font-size: 32px !important;
+    }
+
+    .dash-description,
+    .analysis-description,
+    .history-description,
+    .insights-description {
+        font-size: 13px !important;
+    }
+
+    .dash-section-title,
+    .analysis-card-title,
+    .history-section-title,
+    .insights-section-title {
+        font-size: 18px !important;
+    }
+
+    .dash-metric-value,
+    .insight-metric-value,
+    .history-stat-value {
+        font-size: 26px !important;
+    }
+}

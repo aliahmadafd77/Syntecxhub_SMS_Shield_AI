@@ -1,0 +1,7 @@
+{
+    "optimized_threshold": 0.22499999999999998,
+    "optimization_metric": "F1",
+    "optimization_method": "5-fold out-of-fold training probabilities",
+    "classifier": "Logistic Regression",
+    "feature_extraction": "Character-level TF-IDF"
+}
